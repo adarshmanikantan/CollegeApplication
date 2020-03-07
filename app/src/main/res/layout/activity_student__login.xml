@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Student_Login"
+    android:orientation="horizontal"
+    android:background="#fff">
+    <ImageView
+        android:layout_below="@id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pencil"/>
+
+    <ImageView
+        android:id="@+id/imgpencil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview"
+        android:layout_marginTop="92dp"
+        android:src="@drawable/pencil" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_string"
+        android:layout_marginTop="30dp"
+        android:textSize="50sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorBg"
+        android:fontFamily="@font/sansation"/>
+
+
+<EditText
+    android:layout_below="@id/imgpencil"
+    android:id="@+id/registrationno_edt"
+    android:layout_width="match_parent"
+    android:hint="     Registration Number"
+    android:background="@drawable/edittextbg"
+    android:paddingLeft="20dp"
+    android:textColorHint="#000"
+    android:layout_margin="20dp"
+    android:layout_height="40dp"
+    />
+    <EditText
+        android:id="@+id/studentpswdedt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="     Password"
+        android:paddingLeft="20dp"
+        android:background="@drawable/edittextbg"
+        android:layout_below="@id/registrationno_edt"
+        android:layout_margin="20dp"
+        android:textColorHint="#000"/>
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/shapes"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:layout_below="@id/studentpswdedt"
+         >
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:scaleType="centerCrop"
+    android:src="@drawable/ic_arrow_forward_black_24dp"/>
+    </RelativeLayout>
+    </RelativeLayout>
