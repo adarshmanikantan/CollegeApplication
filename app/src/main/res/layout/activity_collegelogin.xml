@@ -92,14 +92,15 @@
                 android:layout_alignBottom="@id/clgsignup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't have an account?"/>
+                android:text="Don't have an account?"
+                android:visibility="invisible"/>
             <TextView
                 android:id="@+id/clgsignup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/donthave"
                 android:text=" Sign Up"
-                android:onClick="collegeSignup"
+                android:visibility="invisible"
                 android:textColor="#647BA5"
                 android:fontFamily="@font/sansation"
                 android:textSize="30sp"/>

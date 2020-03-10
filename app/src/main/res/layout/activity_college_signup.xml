@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorCollege"
     xmlns:android="http://schemas.android.com/apk/res/android">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -9,7 +10,7 @@
     android:orientation="vertical">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/collegeimage_signup"
         android:layout_width="100dp"
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
@@ -29,12 +30,38 @@
         android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/collegename_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/edittext_border_new"
         android:hint="Name"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Address :"
+        android:textColor="#fff"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/collegename_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edittext_border_new"
+        android:hint="Address"
         android:inputType="textEmailAddress"
         android:padding="10dp"
         android:textColor="#fff"
@@ -55,6 +82,7 @@
         android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/collegeemail_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -78,6 +106,7 @@
         android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/collegephone_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -102,6 +131,7 @@
         android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/collegepswd_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -114,30 +144,8 @@
         android:textColorHint="#fff"
         android:textSize="20dp"
         android:layout_marginBottom="10dp" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:text="Confirm Password :"
-        android:textColor="#fff"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/edittext_border_new"
-        android:hint="Confirm Password"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        android:textColor="#fff"
-        android:textColorHint="#fff"
-        android:textSize="20dp"
-        android:layout_marginBottom="10dp" />
+
     <TextView
         android:id="@+id/img_login"
         android:layout_width="match_parent"
@@ -147,7 +155,8 @@
         android:background="#CD302D2D"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Login"
+        android:onClick="signUpClick"
+        android:text="SignUp"
         android:textColor="#fff"
         android:textSize="20sp"
         android:layout_marginTop="30dp"

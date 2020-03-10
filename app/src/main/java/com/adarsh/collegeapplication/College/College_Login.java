@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.adarsh.collegeapplication.R;
@@ -20,16 +22,22 @@ import retrofit2.Response;
 public class College_Login extends AppCompatActivity {
 
     EditText emailedit,passwordesit;
+    TextView signup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_collegelogin);
 
         initViews();
-    }
 
-    public void collegeSignup(View view) {
 
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+          Intent i=new Intent(College_Login.this,CollegeSignup.class);
+          startActivity(i);
+            }
+        });
     }
 
     public void collegeLogin(View view) {
@@ -69,5 +77,6 @@ public class College_Login extends AppCompatActivity {
     {
         emailedit=findViewById(R.id.college_email_login);
         passwordesit=findViewById(R.id.college_password_login);
+        signup=findViewById(R.id.clgsignup);
     }
 }

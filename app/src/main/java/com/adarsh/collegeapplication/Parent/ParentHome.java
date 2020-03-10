@@ -20,4 +20,9 @@ public class ParentHome extends AppCompatActivity {
     Intent i=new Intent(getApplicationContext(),ParentEvent.class);
     startActivity(i);
     }
+
+    public void syllabusClick(View view) {
+        Intent i=new Intent(getApplicationContext(),ParentEvent.class);
+        startActivity(i);
+    }
 }

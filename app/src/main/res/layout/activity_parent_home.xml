@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Parent.ParentHome">
 <LinearLayout
     android:layout_width="match_parent"
@@ -19,4 +20,18 @@
         android:textColor="#fff"
         android:textSize="30sp"/>
 </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        android:background="#03A9F4"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Syllabus"
+            android:onClick="syllabusClick"
+            android:textColor="#fff"
+            android:textSize="30sp"/>
+    </LinearLayout>
 </LinearLayout>

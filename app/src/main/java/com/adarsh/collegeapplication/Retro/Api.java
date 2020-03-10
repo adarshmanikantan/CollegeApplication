@@ -6,6 +6,7 @@ import com.adarsh.collegeapplication.model.AddStaffModel;
 import com.adarsh.collegeapplication.model.AddStusdentModel;
 import com.adarsh.collegeapplication.model.AddSyllabusModel;
 import com.adarsh.collegeapplication.model.CollegeLoginModel;
+import com.adarsh.collegeapplication.model.CollegeRegistrationModel;
 import com.adarsh.collegeapplication.model.ParentLoginModel;
 import com.adarsh.collegeapplication.model.ParentSignUpModel;
 import com.adarsh.collegeapplication.model.SauravModel;
@@ -104,4 +105,10 @@ public interface Api {
 
      @GET("parent_login.php?")
      Call<ParentLoginModel>PARENT_LOGIN_MODEL_CALL(@Query("email")String email,@Query("password")String password);
+
+     @POST("college_reg.php")
+     Call<CollegeRegistrationModel>COLLEGE_REGISTRATION_MODEL_CALL(@Part("college_name")RequestBody collegename,@Part("address")RequestBody address,
+                                                                   @Part("email")RequestBody email,@Part("phone")RequestBody phone,@Part("password")RequestBody passwordreq,
+                                                                   @Part MultipartBody.Part file);
+
 }

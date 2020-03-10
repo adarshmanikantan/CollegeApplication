@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Parent.ParentEvent"></activity>
+        <activity android:name=".Parent.parentSyllabus" />
+        <activity android:name=".Parent.ParentEvent" />
         <activity android:name=".Parent.ParentHome" />
         <activity android:name=".Parent.ParentSignUp" />
         <activity android:name=".Staff.AddStudentActivity" />

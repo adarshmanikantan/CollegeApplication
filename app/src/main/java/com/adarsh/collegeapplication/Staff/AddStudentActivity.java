@@ -58,7 +58,7 @@ public class AddStudentActivity extends AppCompatActivity {
         st_phone =findViewById(R.id.addstudentname);
         parent_phone =findViewById(R.id.addstudentname);
         post =findViewById(R.id.addstudentname);
-        semester =findViewById(R.id.addstudentname);
+        semester =findViewById(R.id.addstudentsemester);
         button=findViewById(R.id.addbutton);
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("staffdetails", MODE_PRIVATE);
         s_clgid = sharedPreferences.getString("clgid", null);
