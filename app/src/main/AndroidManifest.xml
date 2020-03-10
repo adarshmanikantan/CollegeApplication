@@ -27,7 +27,8 @@
         <activity android:name=".College.ui.AddDepartment" />
         <activity android:name=".Staff.StaffHome" />
         <activity android:name=".College.StaffProfile" />
-        <activity android:name=".College.AddStaffActivity" />
+        <activity android:name=".College.AddStaffActivity"
+            android:theme="@style/Theme.Shrine"/>
         <activity
             android:name=".College.CollegeHome"
             android:label="@string/title_activity_college_home"
