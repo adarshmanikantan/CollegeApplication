@@ -3,7 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/main_student_recycler"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+<Button
+    android:id="@+id/addstudentbtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="ADD STUDENT"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:layout_margin="40dp"/>
 
 </RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".College.AddEvents"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorCollege">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="ADD EVENTS"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+
+         >
+<EditText
+    android:id="@+id/event_title"
+    android:layout_width="200dp"
+    android:background="@drawable/edittextbg"
+    android:layout_height="wrap_content"
+    android:hint="Event Title"
+    android:padding="5dp"
+    android:layout_margin="20dp"
+    />
+    <EditText
+        android:id="@+id/event_date"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Event Date"
+        android:padding="5dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittextbg"
+        />
+    <EditText
+        android:id="@+id/event_description"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:gravity="top"
+        android:background="@drawable/edittextbg"
+        android:hint="Add Description"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittextbg"
+            android:layout_margin="20dp"
+            android:text="ADD EVENT"
+            android:onClick="addEventClick"
+            android:textColor="#fff"
+            android:fontFamily="@font/sansation"
+            android:backgroundTint="@color/colorCollege"/>
+</LinearLayout>
+</LinearLayout>

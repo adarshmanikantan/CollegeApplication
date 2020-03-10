@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".College.AddStaffActivity"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/addstudentimg"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <EditText
+        android:id="@+id/addstudentname"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/addstudentbatch"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Batch"
+        android:inputType="textPersonName"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/addregno"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Register No"
+        android:inputType="textPersonName"
+        android:layout_gravity="center_horizontal" />
+
+
+    <EditText
+        android:id="@+id/addstudentdob"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="d.o.b."
+        android:inputType="textPersonName"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/addphone"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="phone"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/addstudentemail"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPassword"
+        android:layout_gravity="center_horizontal" />
+    <EditText
+        android:id="@+id/addstudentphone"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="textPassword"
+        android:layout_gravity="center_horizontal" />
+    <EditText
+        android:id="@+id/addparentphone"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Phone number of Parent"
+        android:inputType="textPassword"
+        android:layout_gravity="center_horizontal" />
+    <EditText
+        android:id="@+id/addstudentsemester"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Semester"
+        android:inputType="textPassword"
+        android:layout_gravity="center_horizontal" />
+    <Button
+        android:id="@+id/addbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SUBMIT"
+        android:onClick="addStudentSubmitClick"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>
+</ScrollView>

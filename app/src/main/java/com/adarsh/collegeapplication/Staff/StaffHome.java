@@ -91,11 +91,11 @@ public class StaffHome extends AppCompatActivity implements DuoMenuView.OnMenuCl
     private void goToFragment(Fragment fragment, boolean addToBackStack) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-        if (addToBackStack) {
-            transaction.addToBackStack(null);
-        }
+//        if (addToBackStack) {
+//            transaction.addToBackStack(null);
+//        }
 
-        transaction.add(R.id.container, fragment).commit();
+        transaction.replace(R.id.container, fragment).commit();
     }
 
     @Override
@@ -108,8 +108,17 @@ public class StaffHome extends AppCompatActivity implements DuoMenuView.OnMenuCl
 
         // Navigate to the right fragment
         switch (position) {
+            case 0:
+                goToFragment(new MainFragment(),false);
+                break;
+            case 1:
+                goToFragment(new SyllabusFragment(),false);
+                break;
+            case 4:
+                goToFragment(new StaffProfileFragment(),false);
+                break;
             default:
-                goToFragment(new MainFragment(), false);
+                goToFragment(new StaffFragmentHome(), false);
                 break;
         }
 

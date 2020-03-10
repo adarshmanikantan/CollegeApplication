@@ -13,21 +13,21 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.adarsh.collegeapplication.College.ui.gallery.GalleryFragment"
+        android:name="com.adarsh.collegeapplication.College.ui.Department.DepartmentFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_department" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.adarsh.collegeapplication.College.ui.slideshow.SlideshowFragment"
+        android:name="com.adarsh.collegeapplication.College.ui.slideshow.EventsFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_events" />
 
     <fragment
         android:id="@+id/nav_tools"
-        android:name="com.adarsh.collegeapplication.College.ui.tools.ToolsFragment"
+        android:name="com.adarsh.collegeapplication.College.ui.tools.StudentsDepartmentFragment"
         android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        tools:layout="@layout/fragment_studentsdepartment" />
 
     <fragment
         android:id="@+id/nav_share"

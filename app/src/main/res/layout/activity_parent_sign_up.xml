@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorCollege"
-    android:orientation="vertical">
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageView2"
-        android:layout_width="100dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/ic_launcher_background"
-        android:layout_gravity="center"
-        />
-
+    tools:context=".Parent.ParentSignUp"
+    android:orientation="vertical"
+    android:background="#F3A28D">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,47 +15,70 @@
         android:text="Name :"
         android:textColor="#fff"
         android:layout_marginBottom="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/parentreg_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/edittext_border_new"
-        android:hint="Name"
         android:inputType="textEmailAddress"
         android:padding="10dp"
         android:textColor="#fff"
         android:textColorHint="#fff"
         android:textSize="20dp"
         android:layout_marginBottom="10dp" />
-
     <TextView
-        style="@android:style/TextAppearance.DeviceDefault.Medium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="10dp"
-        android:text="Email:"
-        android:layout_marginBottom="5dp"
+        android:text="Reg.Number :"
         android:textColor="#fff"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
         android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/parentreg_registrn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/edittext_border_new"
-        android:hint="Email"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
         android:padding="10dp"
         android:textColor="#fff"
         android:textColorHint="#fff"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Email :"
+        android:textColor="#fff"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/parentreg_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edittext_border_new"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -78,13 +91,12 @@
         android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/parentreg_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/edittext_border_new"
-        android:hint="Phone"
-        android:inputType="textEmailAddress"
         android:padding="10dp"
         android:textColor="#fff"
         android:textColorHint="#fff"
@@ -102,57 +114,33 @@
         android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/parentreg_pswd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/edittext_border_new"
-        android:hint="Password"
         android:inputType="textEmailAddress"
         android:padding="10dp"
         android:textColor="#fff"
         android:textColorHint="#fff"
         android:textSize="20dp"
         android:layout_marginBottom="10dp" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:text="Confirm Password :"
-        android:textColor="#fff"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/edittext_border_new"
-        android:hint="Confirm Password"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        android:textColor="#fff"
-        android:textColorHint="#fff"
-        android:textSize="20dp"
-        android:layout_marginBottom="10dp" />
     <TextView
-        android:id="@+id/img_login"
+        android:id="@+id/parentsignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
         android:background="#CD302D2D"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Login"
+        android:text="SignUp"
+        android:onClick="parentSignUpClick"
         android:textColor="#fff"
         android:textSize="20sp"
-        android:layout_marginTop="30dp"
         android:textStyle="bold" />
 
-
 </LinearLayout>
-</ScrollView>

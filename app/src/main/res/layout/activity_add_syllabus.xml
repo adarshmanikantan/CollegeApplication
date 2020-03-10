@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Staff.AddSyllabus"
+    android:orientation="vertical"
+    android:gravity="center">
+<EditText
+    android:id="@+id/semester"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:hint="semester"/>
+<EditText
+    android:id="@+id/subjectname"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:hint="Subject Name"/>
+    <EditText
+        android:id="@+id/subjectcode"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Subject Code"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select File"
+        android:onClick="selectPdf"/>
+        <TextView
+            android:id="@+id/pdffilename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            />
+
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Syllabus"
+        android:onClick="addSyllabusClick"/>
+</LinearLayout>
