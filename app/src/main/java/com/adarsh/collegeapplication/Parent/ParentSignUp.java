@@ -79,7 +79,6 @@ else if(email.getText().toString().equals(""))
 
                     @Override
                     public void onFailure(Call<ParentSignUpModel> call, Throwable t) {
-
                     }
                 });
     }

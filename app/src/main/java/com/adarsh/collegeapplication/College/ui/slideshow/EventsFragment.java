@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -51,11 +52,16 @@ public class EventsFragment extends Fragment {
         new Retro().getApi().VIEW_EVENT_MODEL_CALL(college_id).enqueue(new Callback<ViewEventModel>() {
             @Override
             public void onResponse(Call<ViewEventModel> call, Response<ViewEventModel> response) {
-                ViewEventModel viewEventModel=response.body();
-                LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL,false);
-                event_recyclerview.setLayoutManager(linearLayoutManager);
-                EventsAdapter eventsAdapter=new EventsAdapter(getActivity(),viewEventModel);
-                event_recyclerview.setAdapter(eventsAdapter);
+                ViewEventModel viewEventModel = response.body();
+                   if(viewEventModel.getStatus().equalsIgnoreCase("success")) {
+                       LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false);
+                       event_recyclerview.setLayoutManager(linearLayoutManager);
+                       EventsAdapter eventsAdapter = new EventsAdapter(getActivity(), viewEventModel);
+                       event_recyclerview.setAdapter(eventsAdapter);
+                   }
+                   else {
+                       Toast.makeText(getActivity(), "No Events were found", Toast.LENGTH_SHORT).show();
+                   }
             }
 
             @Override

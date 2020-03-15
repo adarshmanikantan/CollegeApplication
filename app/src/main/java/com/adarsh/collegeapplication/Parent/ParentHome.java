@@ -22,7 +22,7 @@ public class ParentHome extends AppCompatActivity {
     }
 
     public void syllabusClick(View view) {
-        Intent i=new Intent(getApplicationContext(),ParentEvent.class);
+        Intent i=new Intent(getApplicationContext(),parentSyllabus.class);
         startActivity(i);
     }
 }

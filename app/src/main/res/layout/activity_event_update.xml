@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".College.ui.EventUpdateActivity"
+    android:orientation="vertical"
+    android:background="@color/colorCollege">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorCollege">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="Update Event"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+
+        >
+        <EditText
+            android:id="@+id/e_title"
+            android:layout_width="200dp"
+            android:background="@drawable/edittext_border_new"
+            android:layout_height="wrap_content"
+            android:hint="Event Title"
+            android:padding="5dp"
+            android:layout_margin="20dp"
+            />
+        <EditText
+            android:id="@+id/e_date"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Event Date"
+            android:padding="5dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_border_new"
+            />
+        <EditText
+            android:id="@+id/e_description"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:gravity="top"
+            android:background="@drawable/edittext_border_new"
+            android:hint="Add Description"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="UPDATE EVENT"
+            android:onClick="updateEventClick"
+            android:textColor="#fff"
+            android:fontFamily="@font/sansation"
+            android:backgroundTint="#FF5722"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="DELETE EVENT"
+            android:onClick="deleteEventClick"
+            android:textColor="#fff"
+            android:fontFamily="@font/sansation"
+            android:backgroundTint="#DB382D"/>
+    </LinearLayout>
+</LinearLayout>

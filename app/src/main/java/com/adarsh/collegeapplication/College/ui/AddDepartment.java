@@ -9,10 +9,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.adarsh.collegeapplication.College.CollegeHome;
 import com.adarsh.collegeapplication.College.ui.Department.DepartmentFragment;
 import com.adarsh.collegeapplication.R;
 import com.adarsh.collegeapplication.Retro.Api;
 import com.adarsh.collegeapplication.Retro.Retro;
+import com.adarsh.collegeapplication.Staff.StaffHome;
 import com.adarsh.collegeapplication.model.AddDepartmentModel;
 
 import retrofit2.Call;
@@ -39,7 +41,7 @@ public class AddDepartment extends AppCompatActivity {
                         if(addDepartmentModel.getStatus().equalsIgnoreCase("success"))
                         {
                             Toast.makeText(AddDepartment.this, addDepartmentModel.getStatus(), Toast.LENGTH_SHORT).show();
-                            Intent i=new Intent(getApplicationContext(), DepartmentFragment.class);
+                            Intent i=new Intent(getApplicationContext(), CollegeHome.class);
                             startActivity(i);
                         }
                     }

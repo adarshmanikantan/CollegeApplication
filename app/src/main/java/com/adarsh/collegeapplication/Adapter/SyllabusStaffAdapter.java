@@ -2,6 +2,8 @@ package com.adarsh.collegeapplication.Adapter;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.util.Log;
@@ -40,7 +42,7 @@ public class SyllabusStaffAdapter extends RecyclerView.Adapter<SyllabusStaffAdap
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
 
         holder.sub.setText(viewSyllabusbyStaffModel.getSyllabus().get(position).getSubject());
         holder.subcode.setText(viewSyllabusbyStaffModel.getSyllabus().get(position).getSubcode());
@@ -49,7 +51,9 @@ public class SyllabusStaffAdapter extends RecyclerView.Adapter<SyllabusStaffAdap
             @Override
             public void onClick(View v) {
                 String url=viewSyllabusbyStaffModel.getSyllabus().get(position).getFiles();
-                new DownloadFile().execute(url, "five-point-someone-chetan-bhagat_ebook.pdf");
+             //   new DownloadFile().execute(url, "five-point-someone-chetan-bhagat_ebook.pdf");
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                holder.itemView.getContext().startActivity(browserIntent);
 
             }
         });

@@ -53,13 +53,14 @@ public class AddStudentActivity extends AppCompatActivity {
         studentname =findViewById(R.id.addstudentname);
         batch =findViewById(R.id.addstudentbatch);
         regno =findViewById(R.id.addregno);
-        dob =findViewById(R.id.addstudentname);
-        st_email =findViewById(R.id.addstudentname);
-        st_phone =findViewById(R.id.addstudentname);
-        parent_phone =findViewById(R.id.addstudentname);
-        post =findViewById(R.id.addstudentname);
+        dob =findViewById(R.id.addstudentdob);
+        st_email =findViewById(R.id.addstudentemail);
+        st_phone =findViewById(R.id.studentphone);
+        parent_phone =findViewById(R.id.addparentphone);
         semester =findViewById(R.id.addstudentsemester);
         button=findViewById(R.id.addbutton);
+
+
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("staffdetails", MODE_PRIVATE);
         s_clgid = sharedPreferences.getString("clgid", null);
         s_post = sharedPreferences.getString("post", null);
@@ -118,10 +119,10 @@ public class AddStudentActivity extends AppCompatActivity {
                     public void onResponse(Call<AddStusdentModel> call, Response<AddStusdentModel> response) {
                         AddStusdentModel addStusdentModel = response.body();
                         if (addStusdentModel.getStatus().equals("success")) {
-                            Toast.makeText(getApplicationContext(), addStusdentModel.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), addStusdentModel.getStatus(), Toast.LENGTH_SHORT).show();
 
                         } else {
-                            Toast.makeText(AddStudentActivity.this, addStusdentModel.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddStudentActivity.this, addStusdentModel.getStatus(), Toast.LENGTH_SHORT).show();
                         }
                     }
 

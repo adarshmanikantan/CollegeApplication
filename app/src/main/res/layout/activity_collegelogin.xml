@@ -100,7 +100,6 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/donthave"
                 android:text=" Sign Up"
-                android:visibility="invisible"
                 android:textColor="#647BA5"
                 android:fontFamily="@font/sansation"
                 android:textSize="30sp"/>

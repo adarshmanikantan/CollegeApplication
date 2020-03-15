@@ -2,17 +2,25 @@ package com.adarsh.collegeapplication.Retro;
 
 import com.adarsh.collegeapplication.model.AddDepartmentModel;
 import com.adarsh.collegeapplication.model.AddEventModel;
+import com.adarsh.collegeapplication.model.AddNotesModel;
+import com.adarsh.collegeapplication.model.AddQuestionsModel;
 import com.adarsh.collegeapplication.model.AddStaffModel;
 import com.adarsh.collegeapplication.model.AddStusdentModel;
 import com.adarsh.collegeapplication.model.AddSyllabusModel;
 import com.adarsh.collegeapplication.model.CollegeLoginModel;
 import com.adarsh.collegeapplication.model.CollegeRegistrationModel;
+import com.adarsh.collegeapplication.model.DeleteEventModel;
+import com.adarsh.collegeapplication.model.EventUpdateModel;
 import com.adarsh.collegeapplication.model.ParentLoginModel;
 import com.adarsh.collegeapplication.model.ParentSignUpModel;
 import com.adarsh.collegeapplication.model.SauravModel;
 import com.adarsh.collegeapplication.model.StaffLoginModel;
+import com.adarsh.collegeapplication.model.StudentLoginModel;
 import com.adarsh.collegeapplication.model.ViewDepartmentModel;
 import com.adarsh.collegeapplication.model.ViewEventModel;
+import com.adarsh.collegeapplication.model.ViewNotesModel;
+import com.adarsh.collegeapplication.model.ViewQuestionByStaffModel;
+import com.adarsh.collegeapplication.model.ViewQuestionModel;
 import com.adarsh.collegeapplication.model.ViewStaffModel;
 import com.adarsh.collegeapplication.model.ViewStudentModel;
 import com.adarsh.collegeapplication.model.ViewSyllabusModel;
@@ -80,12 +88,46 @@ public interface Api {
                                                   @Part("college_id") RequestBody collegId,
                                                   @Part("id") RequestBody id
                                                  );
+    @Multipart
+    @POST("add_note.php")
+    Call<AddNotesModel>ADD_NOTES_MODEL_CALL(@Part("department") RequestBody department,
+                                               @Part("semester") RequestBody semester,
+                                               @Part("subject") RequestBody sub,
+                                               @Part("subcode") RequestBody subcode,
+                                               @Part MultipartBody.Part file,
+                                               @Part("college_id") RequestBody collegId,
+                                               @Part("id") RequestBody id
+    );
+
+    @Multipart
+    @POST("add_question_paper.php")
+    Call<AddQuestionsModel>ADD_QUESTIONS_MODEL_CALL(@Part("department") RequestBody department,
+                                                @Part("semester") RequestBody semester,
+                                                @Part("subject") RequestBody sub,
+                                                @Part("subcode") RequestBody subcode,
+                                                @Part MultipartBody.Part file,
+                                                @Part("college_id") RequestBody collegId,
+                                                @Part("id") RequestBody id
+    );
 
     @GET("view_syllabus.php?")
     Call<ViewSyllabusModel>VIEW_SYLLABUS_MODEL_CALL(@Query("department")String department,@Query("semester")String semester,@Query("college_id")String college_id);
 
-    @GET("view_syllabus_bystaff.php?id=31")
+    @GET("view_question.php?")
+    Call<ViewQuestionModel>VIEW_QUESTION_MODEL_CALL(@Query("department")String department, @Query("semester")String semester, @Query("college_id")String college_id);
+
+    @GET("view_imp_note.php?")
+    Call<ViewNotesModel>VIEW_NOTES_MODEL_CALL(@Query("dept")String department,@Query("semester")String semester,@Query("college_id")String college_id);
+
+    @GET("view_syllabus_bystaff.php?")
     Call<ViewSyllabusbyStaffModel>VIEW_SYLLABUSBY_STAFF_MODEL_CALL(@Query("id")String id);
+
+    @GET("view_question_byid.php?")
+    Call<ViewQuestionByStaffModel>VIEW_QUESTION_BY_STAFF_MODEL_CALL(@Query("id")String id);
+
+    @GET(" view_notes_byid.php?")
+    Call<ViewNotesModel>VIEW_NOTES_MODEL_CALL(@Query("id")String id);
+
     @GET("complaint/postcomplaint/")
     Call<List<SauravModel>>SAURAV_MODEL_CALL();
 
@@ -106,9 +148,18 @@ public interface Api {
      @GET("parent_login.php?")
      Call<ParentLoginModel>PARENT_LOGIN_MODEL_CALL(@Query("email")String email,@Query("password")String password);
 
+     @Multipart
      @POST("college_reg.php")
      Call<CollegeRegistrationModel>COLLEGE_REGISTRATION_MODEL_CALL(@Part("college_name")RequestBody collegename,@Part("address")RequestBody address,
                                                                    @Part("email")RequestBody email,@Part("phone")RequestBody phone,@Part("password")RequestBody passwordreq,
                                                                    @Part MultipartBody.Part file);
+      @GET("delete_event.php?college_id=1&event_id=2")
+      Call<DeleteEventModel>DELETE_EVENT_MODEL_CALL(@Query("college_id")String collegeid,@Query("event_id")String event_id);
 
-}
+      @GET("edit_events.php?event=Arts%20Day&college_id=1&date=2020-06-30&description=College%20Arts%20Day%20on%2015.3%2018.%20Chief%20Guest%20will%20be%20famous%20dancer%20Smt%20Sithara%20Balakrishnan.%20Students%20selected%20from%20the%20Talent%20Hunt%20will%20perform%20for%20Arts%20day")
+      Call<EventUpdateModel>EVENT_UPDATE_MODEL_CALL(@Query("event")String event,@Query("college_id")String college_id,@Query("date")String date,@Query("description")String description);
+
+      @GET("student_login.php?")
+    Call<StudentLoginModel>STUDENT_LOGIN_MODEL_CALL(@Query("stud_email")String email,@Query("reg_no")String regno);
+
+  }

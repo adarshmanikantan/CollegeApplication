@@ -9,7 +9,18 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_college_home">CollegeHome</string>
-
+    <string name="launch_file_picker">Launch File Picker</string>
+    <string name="file_thumbnail">File thumbnail</string>
+    <string name="uri">Uri : %1$s</string>
+    <string name="size">Size :  %1$d</string>
+    <string name="mime">Mime: %1$s</string>
+    <string name="type">Type : %1$d</string>
+    <string name="name">Name : %1$s</string>
+    <string name="bucketname">BucketName : %1$s</string>
+    <string name="launch_audio_picker">Launch audio picker</string>
+    <string name="launch_video_picker">Launch video picker</string>
+    <string name="launch_image_picker">Launch image picker</string>
+    <string name="share_log">Share Log</string>
     <string name="menu_home">Staffs</string>
     <string name="menu_gallery">Departments</string>
     <string name="menu_slideshow">Events</string>
@@ -20,8 +31,8 @@
         <item>Students</item>
         <item>Syllabus</item>
         <item>Notes</item>
-        <item>Settings</item>
-        <item>About</item>
+        <item>Question Papers</item>
+        <item>Profile</item>
     </array>
 
     <!-- TODO: Remove or change this placeholder text -->

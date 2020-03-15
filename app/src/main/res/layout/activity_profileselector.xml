@@ -156,10 +156,48 @@
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/layout4"
-        android:onClick="collegeClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/layout3">
+
+        <RelativeLayout
+            android:id="@+id/alumnilayout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/parent_background"
+            android:layout_marginTop="70dp"
+            android:onClick="alumniClick"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alumni"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto"
+                android:textSize="30sp"
+                android:layout_marginRight="30dp"
+                android:textColor="#fff"
+                />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/alumniimg"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hr_manager"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layout5"
+        android:onClick="collegeClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout4">
 
     <RelativeLayout
         android:id="@+id/collegelayout"

@@ -16,20 +16,35 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Staff.AddQuestions"></activity>
+        <activity android:name=".Staff.AddNotes" />
+        <activity android:name=".Student.StudentQuestions" />
+        <activity android:name=".Student.StudentNotes" />
+        <activity android:name=".Student.StudentEvents" />
+        <activity android:name=".Student.StudentSyllabus" />
+        <activity android:name=".Student.StudentHome" />
+        <activity android:name=".Alumni.AlumniSignup" />
+        <activity android:name=".Alumni.AlumniLogin" />
+        <activity android:name=".College.ui.EventUpdateActivity" />
+        <activity android:name=".College.StudentProfileCollege" />
+        <activity android:name=".Staff.AddSyllabusStaffActivity" />
+        <activity android:name=".Staff.ViewStudentsStaff" />
+        <activity android:name=".College.StudentProfile" />
         <activity android:name=".Parent.parentSyllabus" />
         <activity android:name=".Parent.ParentEvent" />
         <activity android:name=".Parent.ParentHome" />
         <activity android:name=".Parent.ParentSignUp" />
         <activity android:name=".Staff.AddStudentActivity" />
-        <activity android:name=".Staff.AddSyllabus" />
         <activity android:name=".College.ViewStudents" />
         <activity android:name=".College.SemesterActivity" />
         <activity android:name=".College.AddEvents" />
         <activity android:name=".College.ui.AddDepartment" />
         <activity android:name=".Staff.StaffHome" />
         <activity android:name=".College.StaffProfile" />
-        <activity android:name=".College.AddStaffActivity"
-            android:theme="@style/Theme.Shrine"/>
+        <activity android:name=".College.CollegeSignup" />
+        <activity
+            android:name=".College.AddStaffActivity"
+            android:theme="@style/Theme.Shrine" />
         <activity
             android:name=".College.CollegeHome"
             android:label="@string/title_activity_college_home"
@@ -37,7 +52,7 @@
         <activity android:name=".Parent_Login" />
         <activity android:name=".College.College_Login" />
         <activity android:name=".Staff_Login" />
-        <activity android:name=".Student_Login" />
+        <activity android:name=".Student.Student_Login" />
         <activity android:name=".Profile_Selection" />
         <activity android:name=".MainActivity">
             <intent-filter>

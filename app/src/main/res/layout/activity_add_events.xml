@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".College.AddEvents"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorCollege">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +30,7 @@
 <EditText
     android:id="@+id/event_title"
     android:layout_width="200dp"
-    android:background="@drawable/edittextbg"
+    android:background="@drawable/edittext_border_new"
     android:layout_height="wrap_content"
     android:hint="Event Title"
     android:padding="5dp"
@@ -43,7 +44,7 @@
         android:padding="5dp"
         android:layout_margin="20dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/edittextbg"
+        android:background="@drawable/edittext_border_new"
         />
     <EditText
         android:id="@+id/event_description"
@@ -52,18 +53,17 @@
         android:layout_margin="20dp"
         android:padding="10dp"
         android:gravity="top"
-        android:background="@drawable/edittextbg"
+        android:background="@drawable/edittext_border_new"
         android:hint="Add Description"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edittextbg"
             android:layout_margin="20dp"
             android:text="ADD EVENT"
             android:onClick="addEventClick"
             android:textColor="#fff"
             android:fontFamily="@font/sansation"
-            android:backgroundTint="@color/colorCollege"/>
+            android:backgroundTint="#FF5722"/>
 </LinearLayout>
 </LinearLayout>

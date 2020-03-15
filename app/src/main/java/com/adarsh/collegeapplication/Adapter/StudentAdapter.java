@@ -18,6 +18,8 @@ import androidx.palette.graphics.Palette;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.adarsh.collegeapplication.College.StaffProfile;
+import com.adarsh.collegeapplication.College.StudentProfile;
+import com.adarsh.collegeapplication.College.StudentProfileCollege;
 import com.adarsh.collegeapplication.R;
 import com.adarsh.collegeapplication.model.ViewStaffModel;
 import com.adarsh.collegeapplication.model.ViewStudentModel;
@@ -74,9 +76,8 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.myViewHo
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(context, StaffProfile.class);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(i);
+                Intent i=new Intent(context, StudentProfileCollege.class);
+                holder.itemView.getContext().startActivity(i);
 
             }
         });

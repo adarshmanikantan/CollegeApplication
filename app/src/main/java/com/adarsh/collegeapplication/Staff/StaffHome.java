@@ -114,6 +114,12 @@ public class StaffHome extends AppCompatActivity implements DuoMenuView.OnMenuCl
             case 1:
                 goToFragment(new SyllabusFragment(),false);
                 break;
+            case 2:
+                goToFragment(new NotesFragment(),false);
+                break;
+            case 3:
+                goToFragment(new QuestionFragment(),false);
+                break;
             case 4:
                 goToFragment(new StaffProfileFragment(),false);
                 break;

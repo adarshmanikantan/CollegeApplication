@@ -35,10 +35,7 @@ public class ViewStudents extends AppCompatActivity {
         recyclerView=findViewById(R.id.student_recycler);
         SharedPreferences sharedPreferencs=getApplicationContext().getSharedPreferences("staffdetails",MODE_PRIVATE);
         String post=sharedPreferencs.getString("post",null);
-        if(post.equals("HOD"))
-        {
-            addstudntbtn.setVisibility(View.VISIBLE);
-        }
+
         SharedPreferences collegepreferences=getApplicationContext().getSharedPreferences("collegepref",MODE_PRIVATE);
         college_id=collegepreferences.getString("collegeidkey",null);
         SharedPreferences sharedPreferences=getApplicationContext().getSharedPreferences("prefer", Context.MODE_PRIVATE);

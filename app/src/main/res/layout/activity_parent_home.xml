@@ -10,13 +10,13 @@
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:layout_margin="20dp"
+    android:onClick="eventsClick"
     android:background="#03A9F4"
     android:gravity="center">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Events"
-        android:onClick="eventsClick"
         android:textColor="#fff"
         android:textSize="30sp"/>
 </LinearLayout>
@@ -25,12 +25,13 @@
         android:layout_height="200dp"
         android:layout_margin="20dp"
         android:background="#03A9F4"
-        android:gravity="center">
+        android:onClick="syllabusClick"
+        android:gravity="center"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Syllabus"
-            android:onClick="syllabusClick"
             android:textColor="#fff"
             android:textSize="30sp"/>
     </LinearLayout>

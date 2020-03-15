@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/subjnotes_student_txtview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:textColor="@color/colorCollege"
+        android:textSize="30sp"
+        android:text="Subject"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30dp">
+    <TextView
+        android:id="@+id/note_student_subcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorCollege"
+        android:text="subject code"/>
+        <Button
+            android:id="@+id/note_student_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorCollege"
+            android:text="Download Syllabus"/>
+</LinearLayout>
+
+</LinearLayout>

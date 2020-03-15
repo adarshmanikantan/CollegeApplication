@@ -48,6 +48,8 @@ public class SyllabusFragment extends Fragment {
                  ViewSyllabusbyStaffModel viewSyllabusbyStaffModel=response.body();
                  if(viewSyllabusbyStaffModel.getStatus().equalsIgnoreCase("success"))
                  {
+                     LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL,false);
+                     syllabusrecycler.setLayoutManager(linearLayoutManager);
                      SyllabusStaffAdapter syllabusStaffAdapter=new SyllabusStaffAdapter(getActivity(),viewSyllabusbyStaffModel);
                      syllabusrecycler.setAdapter(syllabusStaffAdapter);
                  }
@@ -58,15 +60,14 @@ public class SyllabusFragment extends Fragment {
 
              }
          });
-         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL,false);
-         syllabusrecycler.setLayoutManager(linearLayoutManager);
+
 
 
         addsyllabusbtn=view.findViewById(R.id.syllabus_fab);
         addsyllabusbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getActivity(),AddSyllabus.class);
+                Intent i=new Intent(getActivity(),AddSyllabusStaffActivity.class);
                 startActivity(i);
             }
         });

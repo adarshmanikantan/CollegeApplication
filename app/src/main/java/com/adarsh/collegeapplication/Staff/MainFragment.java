@@ -101,8 +101,9 @@ public class MainFragment extends Fragment {
                     SharedPreferences sharedPreferences=getActivity().getSharedPreferences("sempref",MODE_PRIVATE);
                     SharedPreferences.Editor editor=sharedPreferences.edit();
                     editor.putString("semkey",semesterList.get(position));
+                    Toast.makeText(getActivity(),semesterList.get(position), Toast.LENGTH_SHORT).show();
                     editor.apply();
-                    Intent i=new Intent(getActivity(),ViewStudents.class);
+                    Intent i=new Intent(getActivity(),ViewStudentsStaff.class);
                     startActivity(i);
                 }
             });

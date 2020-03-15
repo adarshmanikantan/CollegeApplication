@@ -42,11 +42,11 @@ public class CollegeSignup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_college_signup);
         name = findViewById(R.id.collegename_signup);
-        address = findViewById(R.id.addstaffname);
-        email = findViewById(R.id.addemail);
-        phone = findViewById(R.id.addphone);
-        password = findViewById(R.id.addpassword);
-
+        address = findViewById(R.id.collegename_address);
+        email = findViewById(R.id.collegeemail_signup);
+        phone = findViewById(R.id.collegephone_signup);
+        password = findViewById(R.id.collegepswd_signup);
+        circleImageView=findViewById(R.id.collegeimage_signup);
         circleImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

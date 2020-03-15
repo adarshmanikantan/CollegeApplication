@@ -65,7 +65,7 @@ public class Staff_Login extends AppCompatActivity {
 
                             Intent intent=new Intent(Staff_Login.this, StaffHome.class);
                             startActivity(intent);
-                            Toast.makeText(Staff_Login.this,staffLoginModel.getStatus(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Staff_Login.this,staffLoginModel.getStatus()+"/"+post+"/"+clgid+"/"+staffname+"/"+department, Toast.LENGTH_SHORT).show();
                         }
                     }
 
