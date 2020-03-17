@@ -2,6 +2,7 @@ package com.adarsh.collegeapplication.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
@@ -49,6 +50,31 @@ public class StudentAdapterStaffModule extends RecyclerView.Adapter<StudentAdapt
                 .into(new CustomTarget<Bitmap>() {
                     @Override
                     public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+//                        "id": "4",
+//                                "college_id": "1",
+//                                "stud_name": "Lekshmi",
+//                                "batch": "2018-2020",
+//                                "reg_no": "1214299",
+//                                "department": "MCA",
+//                                "dob": "09/07/1996",
+//                                "stud_email": "lekshmi@gmail.com",
+//                                "stud_phone": "90876543210",
+//                                "parent_phone": "87654321908",
+//                                "semester": "4",
+//                                "stud_photo": "http://srishti-sy
+                       String clgid=viewStudentModel.getStudents().get(position).getCollege_id();
+                       String stud_name=viewStudentModel.getStudents().get(position).getStud_name();
+                       String batch=viewStudentModel.getStudents().get(position).getBatch();
+                       String regno=viewStudentModel.getStudents().get(position).getReg_no();
+                       String department=viewStudentModel.getStudents().get(position).getDepartment();
+                       String dob=viewStudentModel.getStudents().get(position).getDob();
+                       String stud_email=viewStudentModel.getStudents().get(position).getStud_email();
+                       String stud_phone=viewStudentModel.getStudents().get(position).getStud_phone();
+                       String parent_phone=viewStudentModel.getStudents().get(position).getParent_phone();
+                       String semester=viewStudentModel.getStudents().get(position).getSemester();
+                       String student_photo=viewStudentModel.getStudents().get(position).getStud_photo();
+
+
                         holder.studentImageview.setImageBitmap(resource);
                         Palette.from(resource).generate(new Palette.PaletteAsyncListener() {
                             @Override
@@ -73,6 +99,22 @@ public class StudentAdapterStaffModule extends RecyclerView.Adapter<StudentAdapt
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                SharedPreferences sharedPreferences=context.getSharedPreferences("studentpref",Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor=sharedPreferences.edit();
+                editor.putString("clgid",viewStudentModel.getStudents().get(position).getCollege_id());
+                editor.putString("stud_name",viewStudentModel.getStudents().get(position).getStud_name());
+                editor.putString("batch",viewStudentModel.getStudents().get(position).getBatch());
+                editor.putString("regno",viewStudentModel.getStudents().get(position).getReg_no());
+                editor.putString("department",viewStudentModel.getStudents().get(position).getDepartment());
+                editor.putString("dob",viewStudentModel.getStudents().get(position).getDob());
+                editor.putString("stud_email",viewStudentModel.getStudents().get(position).getStud_email());
+                editor.putString("stud_phone",viewStudentModel.getStudents().get(position).getStud_phone());
+                editor.putString("parent_phone",viewStudentModel.getStudents().get(position).getParent_phone());
+                editor.putString("semester",viewStudentModel.getStudents().get(position).getSemester());
+                editor.putString("student_photo",viewStudentModel.getStudents().get(position).getStud_photo());
+                editor.apply();
+
                 Intent i=new Intent(context, StudentProfile.class);
                 holder.itemView.getContext().startActivity(i);
 
@@ -88,6 +130,7 @@ public class StudentAdapterStaffModule extends RecyclerView.Adapter<StudentAdapt
 
     public class myViewHolder extends RecyclerView.ViewHolder
     {
+
         RelativeLayout relativeLayout;
         ImageView studentImageview;
         TextView textViewname,textViewregno;

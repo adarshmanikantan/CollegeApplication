@@ -28,6 +28,11 @@
         android:name="com.adarsh.collegeapplication.College.ui.tools.StudentsDepartmentFragment"
         android:label="@string/menu_tools"
         tools:layout="@layout/fragment_studentsdepartment" />
+    <fragment
+        android:id="@+id/nav_alumni"
+        android:name="com.adarsh.collegeapplication.College.ui.AlumniFragment"
+        android:label="@string/menu_alumni"
+        tools:layout="@layout/fragment_alumni" />
 
     <fragment
         android:id="@+id/nav_share"
@@ -35,9 +40,5 @@
         android:label="@string/menu_share"
         tools:layout="@layout/fragment_share" />
 
-    <fragment
-        android:id="@+id/nav_send"
-        android:name="com.adarsh.collegeapplication.College.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+
 </navigation>

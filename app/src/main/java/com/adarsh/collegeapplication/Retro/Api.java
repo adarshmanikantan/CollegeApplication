@@ -1,5 +1,6 @@
 package com.adarsh.collegeapplication.Retro;
 
+import com.adarsh.collegeapplication.model.AddAttendenceModel;
 import com.adarsh.collegeapplication.model.AddDepartmentModel;
 import com.adarsh.collegeapplication.model.AddEventModel;
 import com.adarsh.collegeapplication.model.AddNotesModel;
@@ -7,6 +8,7 @@ import com.adarsh.collegeapplication.model.AddQuestionsModel;
 import com.adarsh.collegeapplication.model.AddStaffModel;
 import com.adarsh.collegeapplication.model.AddStusdentModel;
 import com.adarsh.collegeapplication.model.AddSyllabusModel;
+import com.adarsh.collegeapplication.model.AlumniRegistrationModel;
 import com.adarsh.collegeapplication.model.CollegeLoginModel;
 import com.adarsh.collegeapplication.model.CollegeRegistrationModel;
 import com.adarsh.collegeapplication.model.DeleteEventModel;
@@ -16,6 +18,7 @@ import com.adarsh.collegeapplication.model.ParentSignUpModel;
 import com.adarsh.collegeapplication.model.SauravModel;
 import com.adarsh.collegeapplication.model.StaffLoginModel;
 import com.adarsh.collegeapplication.model.StudentLoginModel;
+import com.adarsh.collegeapplication.model.ViewAttendenceModel;
 import com.adarsh.collegeapplication.model.ViewDepartmentModel;
 import com.adarsh.collegeapplication.model.ViewEventModel;
 import com.adarsh.collegeapplication.model.ViewNotesModel;
@@ -162,4 +165,14 @@ public interface Api {
       @GET("student_login.php?")
     Call<StudentLoginModel>STUDENT_LOGIN_MODEL_CALL(@Query("stud_email")String email,@Query("reg_no")String regno);
 
-  }
+      //college_id=1&reg_no=1214299&month=January&working=50&present=25
+      @GET("add_attendance.php?")
+      Call<AddAttendenceModel>ADD_ATTENDENCE_MODEL_CALL(@Query("college_id")String clgid,@Query("reg_no")String regno,@Query("month")String month,@Query("working")String working,@Query("present")String present);
+
+      @GET("view_attendance.php?college_id=1&reg_no=1214299")
+      Call<ViewAttendenceModel>VIEW_ATTENDENCE_MODEL_CALL(@Query("college_id")String collegeid,@Query("reg_no")String regno);
+
+      @GET("alumni_reg.php?")
+     Call<AlumniRegistrationModel>ALUMNI_REGISTRATION_MODEL_CALL(@Query("name")String name,@Query("email")String email,@Query("department")String department,@Query("passout")String passout,
+                                                                 @Query("phone")String phone,@Query("password")String password,@Query("college_id")String college_id);
+}

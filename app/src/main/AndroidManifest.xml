@@ -16,7 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Staff.AddQuestions"></activity>
+        <activity android:name=".Alumni.AddAlumni"></activity>
+        <activity android:name=".Student.StudentAttendence" />
+        <activity android:name=".Staff.AddAttendenceActivity" />
+        <activity android:name=".Staff.AddQuestions" />
         <activity android:name=".Staff.AddNotes" />
         <activity android:name=".Student.StudentQuestions" />
         <activity android:name=".Student.StudentNotes" />

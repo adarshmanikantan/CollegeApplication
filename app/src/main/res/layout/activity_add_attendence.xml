@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Staff.AddAttendenceActivity">
+<EditText
+    android:id="@+id/month"
+    android:layout_width="150dp"
+    android:hint="Month"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"/>
+    <EditText
+        android:id="@+id/present"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month"
+        android:hint="Present"
+        android:layout_centerInParent="true"
+        />
+    <EditText
+        android:id="@+id/working"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/present"
+        android:hint="Working Days"
+        android:layout_centerInParent="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/working"
+        android:text="Add Attendence"
+        android:onClick="AddAttendenceClick"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>

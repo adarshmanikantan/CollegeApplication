@@ -25,6 +25,7 @@
     <string name="menu_gallery">Departments</string>
     <string name="menu_slideshow">Events</string>
     <string name="menu_tools">Students</string>
+    <string name="menu_alumni">Alumni</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <array name="menuOptions">
