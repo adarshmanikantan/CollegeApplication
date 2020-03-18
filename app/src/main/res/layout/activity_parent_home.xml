@@ -25,13 +25,13 @@
         android:layout_height="200dp"
         android:layout_margin="20dp"
         android:background="#03A9F4"
-        android:onClick="syllabusClick"
+        android:onClick="AttendenceClick"
         android:gravity="center"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Syllabus"
+            android:text="Attendence"
             android:textColor="#fff"
             android:textSize="30sp"/>
     </LinearLayout>

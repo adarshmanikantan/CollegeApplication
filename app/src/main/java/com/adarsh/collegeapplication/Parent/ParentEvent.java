@@ -19,15 +19,16 @@ import retrofit2.Response;
 
 public class ParentEvent extends AppCompatActivity {
     RecyclerView event_recyclerview;
+    String college_id,regno;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parent_event);
 
         event_recyclerview=findViewById(R.id.p_eventrecycler);
-
-        SharedPreferences collegepreferences=getApplicationContext().getSharedPreferences("collegepref",MODE_PRIVATE);
-        String college_id=collegepreferences.getString("collegeidkey",null);
+        SharedPreferences sharedPreferences=getApplicationContext().getSharedPreferences("parentpref",MODE_PRIVATE);
+        college_id=sharedPreferences.getString("clgid",null);
+        regno=sharedPreferences.getString("regno",null);
 
 
         new Retro().getApi().VIEW_EVENT_MODEL_CALL(college_id).enqueue(new Callback<ViewEventModel>() {

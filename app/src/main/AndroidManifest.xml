@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Alumni.AddAlumni"></activity>
+        <activity android:name=".Parent.StudentAttendenceByParent"></activity>
+        <activity android:name=".Alumni.AddAlumni" />
         <activity android:name=".Student.StudentAttendence" />
         <activity android:name=".Staff.AddAttendenceActivity" />
         <activity android:name=".Staff.AddQuestions" />
@@ -33,7 +34,6 @@
         <activity android:name=".Staff.AddSyllabusStaffActivity" />
         <activity android:name=".Staff.ViewStudentsStaff" />
         <activity android:name=".College.StudentProfile" />
-        <activity android:name=".Parent.parentSyllabus" />
         <activity android:name=".Parent.ParentEvent" />
         <activity android:name=".Parent.ParentHome" />
         <activity android:name=".Parent.ParentSignUp" />

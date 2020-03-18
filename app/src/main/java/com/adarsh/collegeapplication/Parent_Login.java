@@ -49,6 +49,7 @@ EditText email,password;
                             editor.putString("clgid",clgid);
                             editor.putString("studentid",studentid);
                             editor.putString("parentid",parentid);
+                            editor.putString("regno",parentLoginModel.getUser_data().getRegno());
                             editor.apply();
                             Toast.makeText(Parent_Login.this, parentLoginModel.getStatus(), Toast.LENGTH_SHORT).show();
                           Intent i=new Intent(Parent_Login.this, ParentHome.class);

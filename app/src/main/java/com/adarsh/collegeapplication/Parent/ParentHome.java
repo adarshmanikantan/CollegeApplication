@@ -21,8 +21,9 @@ public class ParentHome extends AppCompatActivity {
     startActivity(i);
     }
 
-    public void syllabusClick(View view) {
-        Intent i=new Intent(getApplicationContext(),parentSyllabus.class);
+
+    public void AttendenceClick(View view) {
+        Intent i=new Intent(ParentHome.this,StudentAttendenceByParent.class);
         startActivity(i);
     }
 }
