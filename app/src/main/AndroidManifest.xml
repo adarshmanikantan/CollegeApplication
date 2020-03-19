@@ -16,7 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Parent.StudentAttendenceByParent"></activity>
+        <activity android:name=".Student.ViewJobsStudent"></activity>
+        <activity android:name=".Alumni.ViewJobs" />
+        <activity android:name=".Alumni.PostJobs" />
+        <activity android:name=".Alumni.AlumniHome" />
+        <activity android:name=".Parent.StudentAttendenceByParent" />
         <activity android:name=".Alumni.AddAlumni" />
         <activity android:name=".Student.StudentAttendence" />
         <activity android:name=".Staff.AddAttendenceActivity" />

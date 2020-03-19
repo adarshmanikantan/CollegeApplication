@@ -3,11 +3,13 @@ package com.adarsh.collegeapplication.Retro;
 import com.adarsh.collegeapplication.model.AddAttendenceModel;
 import com.adarsh.collegeapplication.model.AddDepartmentModel;
 import com.adarsh.collegeapplication.model.AddEventModel;
+import com.adarsh.collegeapplication.model.AddJobModel;
 import com.adarsh.collegeapplication.model.AddNotesModel;
 import com.adarsh.collegeapplication.model.AddQuestionsModel;
 import com.adarsh.collegeapplication.model.AddStaffModel;
 import com.adarsh.collegeapplication.model.AddStusdentModel;
 import com.adarsh.collegeapplication.model.AddSyllabusModel;
+import com.adarsh.collegeapplication.model.AlumniLoginModel;
 import com.adarsh.collegeapplication.model.AlumniRegistrationModel;
 import com.adarsh.collegeapplication.model.CollegeLoginModel;
 import com.adarsh.collegeapplication.model.CollegeRegistrationModel;
@@ -21,6 +23,8 @@ import com.adarsh.collegeapplication.model.StudentLoginModel;
 import com.adarsh.collegeapplication.model.ViewAttendenceModel;
 import com.adarsh.collegeapplication.model.ViewDepartmentModel;
 import com.adarsh.collegeapplication.model.ViewEventModel;
+import com.adarsh.collegeapplication.model.ViewJobsModel;
+import com.adarsh.collegeapplication.model.ViewJobsbyAlumniModel;
 import com.adarsh.collegeapplication.model.ViewNotesModel;
 import com.adarsh.collegeapplication.model.ViewQuestionByStaffModel;
 import com.adarsh.collegeapplication.model.ViewQuestionModel;
@@ -175,4 +179,18 @@ public interface Api {
       @GET("alumni_reg.php?")
      Call<AlumniRegistrationModel>ALUMNI_REGISTRATION_MODEL_CALL(@Query("name")String name,@Query("email")String email,@Query("department")String department,@Query("passout")String passout,
                                                                  @Query("phone")String phone,@Query("password")String password,@Query("college_id")String college_id);
+
+     @GET("alumni_login.php?email=aarthi.sics@gmail.com&password=qwerty")
+     Call<AlumniLoginModel>ALUMNI_LOGIN_MODEL_CALL(@Query("email")String email,@Query("password")String password);
+
+     @GET("add_job.php?")
+    Call<AddJobModel>ADD_JOB_MODEL_CALL(@Query("alumni_id")String alumniid,@Query("college_id")String college_id,@Query("company")String company,@Query("title")String title,@Query("description")String desc);
+
+    @GET("view_job_byid.php?")
+    Call<ViewJobsbyAlumniModel>VIEW_JOBSBY_ALUMNI_MODEL_CALL(@Query("alumni_id")String alumniid, @Query("college_id")String college_id);
+
+    @GET("view_job.php?")
+    Call<ViewJobsModel>VIEW_JOBS_MODEL_CALL(@Query("college_id")String college_id);
+
+
 }

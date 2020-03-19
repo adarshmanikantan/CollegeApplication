@@ -40,4 +40,9 @@ public class StudentHome extends AppCompatActivity {
         Intent i=new Intent(StudentHome.this,StudentAttendence.class);
         startActivity(i);
     }
+
+    public void viewJobsClick(View view) {
+        Intent i=new Intent(StudentHome.this,ViewJobsStudent.class);
+        startActivity(i);
+    }
 }

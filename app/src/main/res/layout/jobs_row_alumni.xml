@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="#94BFF0"
+    android:elevation="40dp">
+<TextView
+    android:id="@+id/cname"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Company Name"
+    android:layout_marginTop="25dp"
+    android:textColor="#000"
+    android:layout_gravity="center_horizontal"
+    android:textSize="30sp"
+    />
+    <TextView
+        android:id="@+id/cpost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post"
+        android:textColor="#000"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25sp"
+        />
+    <TextView
+        android:id="@+id/cdesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Description"
+        android:textColor="#000"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:layout_marginBottom="25dp"
+        />
+</LinearLayout>

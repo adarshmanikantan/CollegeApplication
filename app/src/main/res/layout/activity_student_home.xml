@@ -22,7 +22,7 @@
         android:gravity="center"
         android:elevation="30dp"
         android:onClick="studentSyllabusClick"
-        android:background="#E74311">
+        android:background="#EE9680">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
         android:layout_margin="10dp"
         android:elevation="30dp"
         android:onClick="studentEventsClick"
-        android:background="#2196F3"
+        android:background="#7EBAE7"
         android:gravity="center">
         <TextView
             android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
             android:gravity="center"
             android:onClick="notesClick"
             android:layout_margin="10dp"
-            android:background="#39B93B">
+            android:background="#98F19C">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_weight="1"
-            android:background="#9C27B0"
+            android:background="#E19EF0"
             android:elevation="30dp"
             android:onClick="questionsClick"
             android:gravity="center"
@@ -110,11 +110,12 @@
             android:elevation="30dp"
             android:gravity="center"
             android:layout_margin="10dp"
-            android:background="#39B93B">
+            android:onClick="viewJobsClick"
+            android:background="#ECD797">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Notifications"
+                android:text="Jobs"
                 android:textSize="30sp"
                 android:textColor="#fff"
                 android:fontFamily="@font/sansation"
@@ -124,7 +125,7 @@
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_weight="1"
-            android:background="#9C27B0"
+            android:background="#E991AB"
             android:elevation="30dp"
             android:onClick="viewAttendence"
             android:gravity="center"

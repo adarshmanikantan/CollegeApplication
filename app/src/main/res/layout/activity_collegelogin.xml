@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".College.College_Login"
     android:orientation="horizontal"
-    android:background="#647BA5">
+    android:background="@color/colorCollege">
 
     <TextView
         android:id="@+id/textview"
@@ -80,6 +80,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="20dp"
             android:textSize="20dp"
+            android:visibility="invisible"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="20dp"
             android:textColor="#647BA5"/>
@@ -100,8 +101,9 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/donthave"
                 android:text=" Sign Up"
-                android:textColor="#647BA5"
-                android:fontFamily="@font/sansation"
+                android:textStyle="bold"
+                android:textColor="#3BA03F"
+                android:fontFamily="@font/ubuntu"
                 android:textSize="30sp"/>
         </RelativeLayout>
     </RelativeLayout>
